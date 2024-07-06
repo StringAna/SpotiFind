@@ -9,7 +9,7 @@ serv.load_session_state_from_json()
 
 if not st.session_state.isLogged:
     login.login()
-    st.session_state.isLogged = True
 else:
     login.handle_callback()
+
 
