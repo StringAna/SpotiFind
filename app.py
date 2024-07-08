@@ -1,15 +1,23 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+from streamlit_cookies_manager import EncryptedCookieManager
 import service as serv
 import logIn as login
 
-# Load session state from file
+cookies = EncryptedCookieManager(prefix="spotify_", password=st.secrets.COOKIES_PASSWORD )
+
+if not cookies.ready():
+    st.stop()
+
 serv.load_session_state_from_json()
 
+if 'spotify_access_token' in cookies and cookies['spotify_access_token']:
+    st.session_state.isLogged = True
+    st.session_state.spotify_access_token = cookies['spotify_access_token']
 
 if not st.session_state.isLogged:
-    login.login()
+    login.login(cookies)
 else:
-    login.handle_callback()
-
-
+    login.display_logged_in()
+    if st.button('Log out'):
+        serv.logout(cookies)
+        st.experimental_rerun()
