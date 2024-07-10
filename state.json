@@ -1,6 +1,4 @@
 {
   "isLogged": false,
-  "state": null,
-  "spotify_access_token": null,
-  "spotify_refresh_token": null
+  "state": null
 }
