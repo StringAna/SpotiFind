@@ -1,4 +1,7 @@
 {
   "isLogged": false,
-  "state": null
+  "state": null,
+  "refresh_token": null,
+  "access_token": null,
+  "is_Log_in_clicked": false
 }
