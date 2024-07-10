@@ -1,8 +1,6 @@
 import streamlit as st
 import json
-from streamlit_cookies_manager import EncryptedCookieManager
 
-# Function to save session state to a file
 def load_session_state_from_json(file_path="state.json"):
     try:
         with open(file_path, 'r') as f:
@@ -15,12 +13,10 @@ def load_session_state_from_json(file_path="state.json"):
     except json.JSONDecodeError:
         st.write("Error reading session state file. Starting with empty session state.")
 
-# Function to handle Logout button click
-def logout(cookies):
+def logout(cookie_manager):
     st.session_state.isLogged = False
     st.session_state.access_token = None
-
-    # Remove access_token from cookies
-    if 'access_token' in cookies:
-        del cookies['access_token']
-        cookies.save()
+    st.session_state.refresh_token = None
+    if cookie_manager.get('spotify_auth_state'):
+        cookie_manager.delete('spotify_auth_state')
+        st.rerun()
