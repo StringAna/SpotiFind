@@ -1,12 +1,10 @@
 import streamlit as st
 import service as serv
+import components as cp
 
-
-####################################################
-# Streamlit App
-####################################################
-
-st.title('Spotify Auth with Streamlit')
+cp.title()
+cp.slogan()
+cp.landing_animation()
 
 cookie_manager = serv.initialize_session()
 query_params = serv.get_query_params()
