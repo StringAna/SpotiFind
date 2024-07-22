@@ -163,3 +163,4 @@ cython_debug/
 #.idea/
 ignore_files.txt
 workspaceArchiver.txt
+user_data_hardcoded.json
