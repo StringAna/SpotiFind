@@ -7,6 +7,7 @@ Get paired with users who vibe to the same songs as you. Whether it’s that cat
 SpotiFind is a web application that helps users find friends based on their music taste using Spotify data. It analyzes user listening habits and recommends potential connections with similar musical preferences.
 
 ## Features
+
 - OAuth 2.0 authentication with Spotify
 - User profile visualization
 - Music taste analysis
@@ -14,6 +15,7 @@ SpotiFind is a web application that helps users find friends based on their musi
 - Real-time music data synchronization
 
 ## Tech Stack
+
 - Python 3.8+
 - Streamlit
 - Spotify Web API
@@ -21,6 +23,7 @@ SpotiFind is a web application that helps users find friends based on their musi
 - SDV (for synthetic data generation)
 
 ## Project Structure
+
 ```
 SpotiFind/
 ├── README.md
@@ -44,34 +47,40 @@ SpotiFind/
 ## Setup Instructions
 
 1. **Clone the Repository**
+
 ```bash
 git clone https://github.com/yourusername/SpotiFind.git
 cd SpotiFind
 ```
 
 2. **Create Virtual Environment**
+
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
 ```
 
 3. **Install Dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. **Configure Spotify API**
+
 - Create a Spotify Developer account
 - Register your application
 - Add callback URL, for example: `http://localhost:8501`
 - Copy Client ID and Secret to environment variables
 
 5. **Run the Application**
+
 ```bash
 streamlit run app.py
 ```
 
 ## Environment Variables
+
 ```
 SPOTIFY_CLIENT_ID=your_client_id
 SPOTIFY_CLIENT_SECRET=your_client_secret
@@ -79,6 +88,7 @@ REDIRECT_URI=http://localhost:8501
 ```
 
 ## Contributing
+
 1. Fork the repository
 2. Create feature branch
 3. Commit changes
@@ -86,8 +96,11 @@ REDIRECT_URI=http://localhost:8501
 5. Create Pull Request
 
 ## License
+
 MIT License
 
 ## Contact
+
 Developers - Ankit Kumar, Antara Tewary, Lingyun Dai
+
 Project Link: https://stringana.github.io/SpotiFind/
