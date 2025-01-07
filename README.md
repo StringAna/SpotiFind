@@ -6,6 +6,25 @@ Get paired with users who vibe to the same songs as you. Whether it’s that cat
 
 SpotiFind is a web application that helps users find friends based on their music taste using Spotify data. It analyzes user listening habits and recommends potential connections with similar musical preferences.
 
+**Note:** This project is currently under development. The current version serves as a frontend prototype to demonstrate the planned user interface and core functionality.
+
+## Current Status
+
+✅ Implemented:
+
+- Spotify OAuth Authentication
+- Basic Navigation System
+- Homepage Layout
+- User Session Management
+- Frontend Prototype
+
+🚧 In Development:
+
+- Music Taste Analysis Algorithm
+- Friend Recommendation System
+- User Profile Dashboard
+- Social Connection Features
+
 ## Features
 
 - OAuth 2.0 authentication with Spotify
